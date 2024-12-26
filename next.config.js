@@ -37,7 +37,7 @@ module.exports = withPWA({
       return config;
     },
   }),
-  ...(process.env.APPLICATION_MODE === 'production' && {
+  ...(process.env.APPLICATION_MODE && {
     typescript: {
       ignoreBuildErrors: true,
     },
